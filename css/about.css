@@ -1,0 +1,72 @@
+@import url('../css/root.css');
+@import url('../css/nav.css');
+.container{
+    height: calc(100vh - 56px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col-md-12 h1{
+    padding-top: 15vh;
+    padding-bottom: 10vh;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 4px;
+}
+.col-md-12 h3{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+.col-md-12 p{
+    padding-top: 4vh;
+    padding-bottom: 0vh;
+}
+.col-md-12 h5{
+    padding-top: 3vh;
+    padding-bottom: 1vh;
+}
+.col-md-12 .h5-main{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    text-transform: uppercase;
+}
+.navbar-brand-a{
+    text-transform: uppercase;
+    color: var(--color);
+    font-family: "Suranna", serif;
+    font-weight: 550;
+    position: relative;
+}
+.navbar-brand-a::after {
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    width: 5%;
+    height: 1px;
+    background: #e8eaed;
+    position: absolute;
+    animation: moveAround 4s infinite  ease-in-out;
+}
+.navbar-brand-a::before {
+    content: '';
+    display: block;
+    bottom: 0;
+    right: 0;
+    width: 5%;
+    height: 1px;
+    background: #e8eaed;
+    position: absolute;
+    animation: moveAround 4s infinite ease-in-out;
+}
+@keyframes moveAround {
+    0% {
+        width: 5%;
+    }
+    50%{
+        width: 50%;
+    }
+    100%{
+        width: 5%;
+    }
+}
