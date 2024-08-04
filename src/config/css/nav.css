@@ -1,0 +1,89 @@
+@import url('./root.css');
+body {
+    background-color: var(--bg);
+    color: var(--color);
+}
+.navbar-dark .navbar-nav .nav-link {
+    margin-right: 10px;
+    text-transform: uppercase;
+    color: var(--color);
+    font-family: "League Spartan", sans-serif;
+    letter-spacing: 2px;
+    position: relative;
+    font-size: 15px;
+}
+.navbar-dark .navbar-brand {
+    text-transform: uppercase;
+    color: var(--color);
+    font-family: "Suranna", serif;
+    font-weight: 550;
+    font-size: 15px;
+    letter-spacing: 4px;
+}
+.btn-dark {
+    background-color: transparent!important;
+    border: none !important;
+    z-index: 2;
+    fill: var(--color) !important;
+    transition: 0.3s ease;
+}
+.btn-dark:hover {
+    color: var(--bg)!important;
+    background-color: transparent !important;
+    z-index: 2;
+    fill: var(--bg) !important;
+}
+.align{
+    letter-spacing: 2px;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar-dark .navbar-nav .nav-link:not(.btn,.active)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    display: block;
+    margin-top: 7px;
+    right: 0;
+    background: var(--color);
+    transition: width 0.3s ease;
+}
+.navbar-dark .navbar-nav .nav-link:not(.btn):hover::after {
+    width: 100%;
+    left: 0;
+    background: var(--color);
+}
+.btn-dark::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color);
+    transition:  0.2s ease;
+    z-index: 1;
+    border-radius: 5px;
+}
+.btn-dark:hover::after {
+    height: 100%;
+    z-index: -1;
+}
+.active::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    display: block;
+    margin-top: 7px;
+    right: 0;
+    background: var(--color);
+    transition: width 0.3s ease;
+}
+.active{
+    opacity: 75%;
+}
